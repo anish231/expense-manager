@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Expenditure Manager</title>
+</head>
+
+<link rel="stylesheet" href="/css/styles.css">
+
+<body>
+  <center>
+
+  <form class="date" action="/getDate" method="post">
+    <p>Enter DATE:  </p>
+    <input type="date" name="date1" placeholder="Enter Date" autocomplete="off">
+    <button style="margin-top:10px;"type="submit" name="button">GO</button>
+
+    </form>
+  </center>
+
+  <div class="box" id="heading">
+
+
+    <h1><%= kindaDay %></h1>
+
+  </div>
+
+  <div class="box">
+
+    <% for(var i=0;i<optio.length;i++) { %>
+      <div class="item">
+        <div style="width:150px;">
+    <p><%= optio[i] %></p>
+  </div>
+  <div style="width:80px;float:left;">
+    <a style="font-size:15px;" href="desc.html">ADD Description</a>
+  </div>
+    <p>    </p>
+  <div style="width:80px;float:left;">
+    <a style="font-size:15px;" href="amount.html">ADD AMOUNT SPENT</a>
+  </div>
+
+    </div>
+    <% } %>
+
+  <form class="item" action="/" method="post">
+    <input type="text" name="job" placeholder="NEW EXPENDITURE" autocomplete="off">
+    <button type="submit" name="button">+</button>
+
+  </form>
+
+</div>
+
+
+  </body>
+</html>
